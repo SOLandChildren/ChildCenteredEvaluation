@@ -1,0 +1,32 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fb5ceb163fc, pid=10613, tid=10655
+#
+# JRE version: OpenJDK Runtime Environment (21.0.9+10) (build 21.0.9+10-Ubuntu-122.04)
+# Java VM: OpenJDK 64-Bit Server VM (21.0.9+10-Ubuntu-122.04, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libc.so.6+0x453fc]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -F%F -- %E" (or dumping to /data/hc_storage/ChildCenteredEvaluation/code/core.10613)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-21
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: jupyter[pyterrier]:/home/hchakrabar/data/hc_storage/ChildCenteredEvaluation/code/indexing_retrieval.ipynb
+
+Host: Intel(R) Xeon(R) Gold 6342 CPU @ 2.80GHz, 22 cores, 172G, Ubuntu 22.04.5 LTS
+Time: Sun Jan  4 13:17:03 2026 CET elapsed time: 346.601695 seconds (0d 0h 5m 46s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000244e2630):  VMThread "VM Thread"          [id=10655, stack(0x00007fb518e35000,0x00007fb518f35000) (1024K)]
+
+Stack: [0x00007fb518e35000,0x00007fb518f35000],  sp=0x00007fb518f33800,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x453fc]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR)
