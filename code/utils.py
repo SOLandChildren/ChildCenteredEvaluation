@@ -1,7 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 import numpy as np
 import pandas as pd
+<<<<<<< HEAD
 import pyterrier as pt
+=======
+>>>>>>> 1ef685e2c1401cad1c1ac06220d4513d7faad139
 
 def get_ranked_lists(path):
     bm25 = pd.read_csv(path+"BM25.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
