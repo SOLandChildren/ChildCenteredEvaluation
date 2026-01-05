@@ -4,21 +4,12 @@ import pandas as pd
 import pyterrier as pt
 
 def get_ranked_lists(path):
-<<<<<<< HEAD
     bm25 = pd.read_csv(path+"BM25.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     tfidf = pd.read_csv(path+"TF-IDF.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     dlm = pd.read_csv(path+"DirichletLM.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     monot5 = pd.read_csv(path+"MonoT5-base.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     vicuna = pd.read_csv(path+"RankVicuna.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     zephyr = pd.read_csv(path+"RankZephyr.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
-=======
-    bm25 = pd.read_csv(path+"BM25.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
-    tfidf = pd.read_csv(path+"TF-IDF.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
-    dlm = pd.read_csv(path+"DirichletLM.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
-    monot5 = pd.read_csv(path+"MonoT5-base.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
-    vicuna = pd.read_csv(path+"RankVicuna.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
-    zephyr = pd.read_csv(path+"RankZephyr.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
->>>>>>> 4aec2ff6568ae7ac248ebd822cea5dbedb9929b1
 
     return [tfidf, bm25, dlm, monot5, vicuna, zephyr]
 
@@ -28,14 +19,9 @@ def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
         run = retriever_system(topics)
     elif isinstance(retriever_system, pd.DataFrame):
         run = retriever_system
-<<<<<<< HEAD
 
     run["qid"] = run["qid"].astype(str)
     # run = run.sort_values(by=["qid", "rank"], axis=0)
-=======
-    
-    run["qid"] = run["qid"].astype(str)
->>>>>>> 4aec2ff6568ae7ac248ebd822cea5dbedb9929b1
     RBP_scores = []
     if isinstance(k, int):
         for qid in topics["qid"].unique():
@@ -92,10 +78,7 @@ def cRBP(topics, corpus, qrels, retriever_system, upper_threshold, lower_thresho
         run = retriever_system
         
     run["qid"] = run["qid"].astype(str)
-<<<<<<< HEAD
     # run = run.sort_values(by=["qid", "rank"], axis=0)
-=======
->>>>>>> 4aec2ff6568ae7ac248ebd822cea5dbedb9929b1
     RBP_scores = []
     if isinstance(k, int):
         
