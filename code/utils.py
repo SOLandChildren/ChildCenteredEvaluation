@@ -1,5 +1,16 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 import numpy as np
+import pandas as pd
+
+def get_ranked_lists(path):
+    bm25 = pd.read_csv(path+"BM25.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
+    tfidf = pd.read_csv(path+"TF-IDF.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
+    dlm = pd.read_csv(path+"DirichletLM.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
+    monot5 = pd.read_csv(path+"MonoT5-base.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
+    vicuna = pd.read_csv(path+"RankVicuna.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
+    zephyr = pd.read_csv(path+"RankZephyr.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"])
+
+    return [tfidf, bm25, dlm, monot5, vicuna, zephyr]
 
 
 def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
