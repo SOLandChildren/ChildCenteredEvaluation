@@ -1,15 +1,35 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 import numpy as np
+import pandas as pd
+import pyterrier as pt
+
+def get_ranked_lists(path):
+    bm25 = pd.read_csv(path+"BM25.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    tfidf = pd.read_csv(path+"TF-IDF.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    dlm = pd.read_csv(path+"DirichletLM.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    monot5 = pd.read_csv(path+"MonoT5-base.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    vicuna = pd.read_csv(path+"RankVicuna.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    zephyr = pd.read_csv(path+"RankZephyr.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+
+    return [tfidf, bm25, dlm, monot5, vicuna, zephyr]
 
 
 def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
-    if isinstance(k, int):
+    if isinstance(retriever_system, pt.terrier.retriever.Retriever):
         run = retriever_system(topics)
-        RBP_scores = []
-        
+    elif isinstance(retriever_system, pd.DataFrame):
+        run = retriever_system
+
+    run["qid"] = run["qid"].astype(str)
+    # run = run.sort_values(by=["qid", "rank"], axis=0)
+    RBP_scores = []
+    if isinstance(k, int):
         for qid in topics["qid"].unique():
+            # print(type(qid), run["qid"].dtype)
             query_score = 0
             docs = run.loc[run["qid"]==qid][:k] # the top-k documents retrieved for a query
+            # print(docs)
+            # break
             docid_col_name = [col for col in qrels.columns if col.startswith("doc")][0] # the name of the column containing the docid
             for _, row in docs.iterrows():
                 rank = row["rank"] + 1
@@ -25,9 +45,6 @@ def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
             query_score = query_score * (1-phi)
             RBP_scores.append(query_score)
     elif k==None:
-        run = retriever_system(topics)
-        RBP_scores = []
-        
         for qid in topics["qid"].unique():
             query_score = 0
             docs = run.loc[run["qid"]==qid] # all documents retrieved for a query
@@ -53,113 +70,89 @@ def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
         assert len(RBP_scores) == len(topics)
         return sum(RBP_scores)/len(RBP_scores)
     
-def chRBP(topics, topical_qrels, readability_qrels, harm_qrels, retriever_system, k=None, phi=0.8, perquery=False):
-    pass
-    # if isinstance(k, int):
-    #     run = retriever_system(topics)
-    #     uhRBP_scores = []
+def cRBP(topics, corpus, qrels, retriever_system, upper_threshold, lower_threshold, k=None, phi=0.8, perquery=False):
+    if isinstance(retriever_system, pt.terrier.retriever.Retriever):
+        run = retriever_system(topics)
+        run["qid"] = run["qid"].astype(str)
+    elif isinstance(retriever_system, pd.DataFrame):
+        run = retriever_system
         
-    #     for qid in topics["qid"].unique():
-    #         query_score = 0
-    #         docs = run.loc[run["qid"]==qid][:k] # the top-k documents retrieved for a query
-    #         docid_col_name = [col for col in topical_qrels.columns if col.startswith("doc")][0] # the name of the column containing the docid
-    #         for _, row in docs.iterrows():
-    #             rank = row["rank"] + 1
-    #             docid = row[docid_col_name]
-                
-    #             topical_qrel_row = topical_qrels.loc[(topical_qrels["qid"]==qid) & (topical_qrels[docid_col_name]==docid)]
-    #             if len(topical_qrel_row) == 0:
-    #                 topical_rel = 0
-    #             elif len(topical_qrel_row) == 1:
-    #                 topical_rel = list(topical_qrel_row["relevance"])[0]
-    #             else:
-    #                 raise ValueError("query-document pair has more than one topical relevance label.")
-                
-    #             harm_qrel_row = harm_qrels.loc[(harm_qrels["qid"]==qid) & (harm_qrels[docid_col_name]==docid)]
-    #             if len(harm_qrel_row) == 0:
-    #                 harm_rel = 0
-    #             elif len(harm_qrel_row) == 1:
-    #                 harm_rel = list(harm_qrel_row["relevance"])[0]
-    #             else:
-    #                 raise ValueError("query-document pair has more than one harm relevance label.")
-                
-    #             read_qrel_row = readability_qrels.loc[(readability_qrels["qid"]==qid) & (readability_qrels[docid_col_name]==docid)]
-    #             if len(read_qrel_row) == 0:
-    #                 read_rel = 0
-    #             elif len(read_qrel_row) == 1:
-    #                 read_rel = list(read_qrel_row["relevance"])[0]
-    #             else:
-    #                 raise ValueError("query-document pair has more than one readability relevance label.")
-                
-    #             query_score += (phi**(rank-1)) * topical_rel * read_rel * harm_rel
-    #         query_score = query_score * (1-phi)
-    #         uhRBP_scores.append(query_score)
-    # elif k==None:
-    #     run = retriever_system(topics)
-    #     uhRBP_scores = []
+    run["qid"] = run["qid"].astype(str)
+    # run = run.sort_values(by=["qid", "rank"], axis=0)
+    RBP_scores = []
+    if isinstance(k, int):
         
-    #     for qid in topics["qid"].unique():
-    #         query_score = 0
-    #         docs = run.loc[run["qid"]==qid] # all documents retrieved for a query
-    #         docid_col_name = [col for col in topical_qrels.columns if col.startswith("doc")][0] # the name of the column containing the docid
-    #         for _, row in docs.iterrows():
-    #             rank = row["rank"] + 1
-    #             docid = row[docid_col_name]
-    #             topical_qrel_row = topical_qrels.loc[(topical_qrels["qid"]==qid) & (topical_qrels[docid_col_name]==docid)]
-    #             if len(topical_qrel_row) == 0:
-    #                 topical_rel = 0
-    #             elif len(topical_qrel_row) == 1:
-    #                 topical_rel = list(topical_qrel_row["relevance"])[0]
-    #             else:
-    #                 raise ValueError("query-document pair has more than one topical relevance label.")
-                
-    #             harm_qrel_row = harm_qrels.loc[(harm_qrels["qid"]==qid) & (harm_qrels[docid_col_name]==docid)]
-    #             if len(harm_qrel_row) == 0:
-    #                 harm_rel = 0
-    #             elif len(harm_qrel_row) == 1:
-    #                 harm_rel = list(harm_qrel_row["relevance"])[0]
-    #             else:
-    #                 raise ValueError("query-document pair has more than one harm relevance label.")
-                
-    #             read_qrel_row = readability_qrels.loc[(readability_qrels["qid"]==qid) & (readability_qrels[docid_col_name]==docid)]
-    #             if len(read_qrel_row) == 0:
-    #                 read_rel = 0
-    #             elif len(read_qrel_row) == 1:
-    #                 read_rel = list(read_qrel_row["relevance"])[0]
-    #             else:
-    #                 raise ValueError("query-document pair has more than one readability relevance label.")
-                
-    #             query_score += (phi**(rank-1)) * topical_rel * read_rel * harm_rel
-    #         query_score = query_score * (1-phi)
-    #         uhRBP_scores.append(query_score)
-    # else:
-    #     raise ValueError("cutoff value not valid.")
-    # if perquery == True:
-    #     return uhRBP_scores
-    # else:
-    #     assert len(uhRBP_scores) == len(topics)
-    #     return sum(uhRBP_scores)/len(uhRBP_scores)
+        for qid in topics["qid"].unique():
+            query_score = 0
+            docs = run.loc[run["qid"]==qid][:k] # the top-k documents retrieved for a query
+            docid_col_name = [col for col in qrels.columns if col.startswith("doc")][0] # the name of the column containing the docid
+            for _, row in docs.iterrows():
+                rank = row["rank"] + 1
+                docid = row[docid_col_name]
+                qrel_row = qrels.loc[(qrels["qid"]==qid) & (qrels[docid_col_name]==docid)]
+                if len(qrel_row) == 0:
+                    rel = 0
+                elif len(qrel_row) == 1:
+                    rel = list(qrel_row["relevance"])[0]
+                else:
+                    raise ValueError("query-document pair has more than one relevance label.")
+                retr_doc = corpus.loc[corpus[docid_col_name]==docid]
+                read =  get_comprehension_score(list(retr_doc["readability"])[0], th_high = upper_threshold, th_low=lower_threshold)
+                obj = list(retr_doc["obj_prob"])[0]
+                edu = list(retr_doc["edu_val"])[0]/5
+                query_score += (phi**(rank-1)) * rel * read * obj * edu
+            query_score = query_score * (1-phi)
+            RBP_scores.append(query_score)
+    elif k==None:
+        for qid in topics["qid"].unique():
+            query_score = 0
+            docs = run.loc[run["qid"]==qid] # all documents retrieved for a query
+            docid_col_name = [col for col in qrels.columns if col.startswith("doc")][0] # the name of the column containing the docid
+            for _, row in docs.iterrows():
+                rank = row["rank"] + 1
+                docid = row[docid_col_name]
+                qrel_row = qrels.loc[(qrels["qid"]==qid) & (qrels[docid_col_name]==docid)]
+                if len(qrel_row) == 0:
+                    rel = 0
+                elif len(qrel_row) == 1:
+                    rel = list(qrel_row["relevance"])[0]
+                else:
+                    raise ValueError("query-document pair has more than one relevance label.")
+                retr_doc = corpus.loc[corpus[docid_col_name]==docid]
+                read =  get_comprehension_score(list(retr_doc["readability"])[0], th_high = upper_threshold, th_low=lower_threshold)
+                obj = list(retr_doc["obj_prob"])[0]
+                edu = list(retr_doc["edu_val"])[0]/5
+                query_score += (phi**(rank-1)) * rel * read * obj * edu
+            query_score = query_score * (1-phi)
+            RBP_scores.append(query_score)
+    else:
+        raise ValueError("cutoff value not valid.")
+    if perquery == True:
+        return RBP_scores
+    else:
+        assert len(RBP_scores) == len(topics)
+        return sum(RBP_scores)/len(RBP_scores)
     
-def get_graded_readability_milton(readability_val, th):
-    if readability_val == th:
+def get_comprehension_score(readability_val, th_high, th_low):
+    if (th_low <= readability_val) and (readability_val <= th_high): # readability within expected range
         return 1
-    elif (readability_val < (th + 4)) and (readability_val > th):
-        return (np.cos(0.79*readability_val - (th - (0.21*th)))+1)/2
-    elif (readability_val < th) and (readability_val > (th-6)):
-        return (np.cos((0.5236 * readability_val) - (0.5236 * th))+1)/2
+    elif (th_high < readability_val) and (readability_val < (th_high + 4)): # readability higher than upper threshold
+        return (np.cos(0.79*readability_val - (th_high - (0.21*th_high)))+1)/2
+    elif ((th_low - 6) < readability_val) and (readability_val < th_low): # readability less than lower threshold
+        return (np.cos((0.5236 * readability_val) - (0.5236 * th_low))+1)/2
     else:
         return 0
         
     # return (1/2)-(np.arctan(readability_val-th)/np.pi)
 
-def get_graded_readability_rel_milton(readability_scores, threshold):
-    labels = []
-    for score in readability_scores:
-        if score < 0:
-            labels.append(None)
-        else:
-            labels.append(get_graded_readability_milton(int(score), th=threshold))
-    return labels
+# def get_graded_readability_rel_milton(readability_scores, upper_threshold, lower_threshold):
+#     labels = []
+#     for score in readability_scores:
+#         if score < 0:
+#             labels.append(None)
+#         else:
+#             labels.append(get_graded_readability_milton(int(score), th_high=upper_threshold, th_low=lower_threshold))
+#     return labels
 
 def get_edu_value(text):
     tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/fineweb-edu-classifier")
