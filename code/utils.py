@@ -11,7 +11,7 @@ def get_ranked_lists(path):
     vicuna = pd.read_csv(path+"RankVicuna.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     zephyr = pd.read_csv(path+"RankZephyr.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
 
-    return [tfidf, bm25, dlm, monot5, vicuna, zephyr]
+    return [bm25, tfidf, dlm, monot5, vicuna, zephyr]
 
 
 def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
