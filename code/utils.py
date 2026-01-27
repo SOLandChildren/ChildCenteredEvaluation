@@ -10,8 +10,9 @@ def get_ranked_lists(path):
     monot5 = pd.read_csv(path+"MonoT5-base.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     vicuna = pd.read_csv(path+"RankVicuna.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
     zephyr = pd.read_csv(path+"RankZephyr.res", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
-
-    return [bm25, tfidf, dlm, monot5, vicuna, zephyr]
+    korsce = pd.read_csv(path+"korsce.txt", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    redorank = pd.read_csv(path+"redorank.txt", sep=" ", header=None, names=["qid", "q0", "docno", "rank", "score", "pyterrier"]).sort_values(by=["qid", "rank"], axis=0)
+    return [bm25, tfidf, dlm, monot5, vicuna, zephyr, korsce, redorank]
 
 
 def RBP(topics, qrels, retriever_system, k=None, phi=0.8, perquery=False):
@@ -170,7 +171,7 @@ def get_edu_value(text):
     return result["int_score"]
 
 def get_obj_likelihood(texts):
-    pipe = pipeline("text-classification", model="GroNLP/mdebertav3-subjectivity-english", top_k=2) # to directly get the prediction
+    pipe = pipeline("text-classification", model="GroNLP/mdebertav3-subjectivity-english", top_k=2)
     # label_map = {
     #     "LABEL_0": "OBJ",
     #     "LABEL_1": "SUBJ"
