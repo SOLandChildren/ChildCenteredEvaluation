@@ -15,8 +15,14 @@ def get_ranked_lists(path, dataset_name):
     
     if dataset_name == "kidfriend":
         google = pd.read_csv("results/kid-friend/google.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
+        google_korsce = pd.read_csv("results/kid-friend/google_korsce.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
+        google_redorank = pd.read_csv("results/kid-friend/google_redorank.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
+        
         bing = pd.read_csv("results/kid-friend/bing.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
-        return [bm25, tfidf, dlm, monot5, vicuna, zephyr, korsce, redorank, google, bing]
+        bing_korsce = pd.read_csv("results/kid-friend/bing_korsce.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
+        bing_redorank = pd.read_csv("results/kid-friend/bing_redorank.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
+        
+        return [bm25, tfidf, dlm, monot5, vicuna, zephyr, korsce, redorank, google, google_korsce, google_redorank, bing, bing_korsce, bing_redorank]
     
     elif dataset_name == "requik":    
         return [bm25, tfidf, dlm, monot5, vicuna, zephyr, korsce, redorank]
