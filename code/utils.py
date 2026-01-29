@@ -114,7 +114,7 @@ def cRBP(topics, corpus, qrels, retriever_system, upper_threshold, lower_thresho
                 retr_doc = corpus.loc[corpus[docid_col_name]==docid]
                 read =  get_comprehension_score(list(retr_doc["readability"])[0], th_high = upper_threshold, th_low=lower_threshold)
                 obj = list(retr_doc["obj_prob"])[0]
-                edu = list(retr_doc["edu_val"])[0]/5
+                edu = list(retr_doc["edu_val"])[0]/5.0
                 query_score += (phi**(rank-1)) * rel * read * obj * edu
             query_score = query_score * (1-phi)
             RBP_scores.append(query_score)
@@ -136,7 +136,7 @@ def cRBP(topics, corpus, qrels, retriever_system, upper_threshold, lower_thresho
                 retr_doc = corpus.loc[corpus[docid_col_name]==docid]
                 read =  get_comprehension_score(list(retr_doc["readability"])[0], th_high = upper_threshold, th_low=lower_threshold)
                 obj = list(retr_doc["obj_prob"])[0]
-                edu = list(retr_doc["edu_val"])[0]/5
+                edu = list(retr_doc["edu_val"])[0]/5.0
                 query_score += (phi**(rank-1)) * rel * read * obj * edu
             query_score = query_score * (1-phi)
             RBP_scores.append(query_score)
