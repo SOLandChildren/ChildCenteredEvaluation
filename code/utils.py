@@ -23,9 +23,6 @@ def get_ranked_lists(path, dataset_name):
         bing_redorank = pd.read_csv("results/kid-friend/bing_redorank.txt", sep=" ", header=None, names=["qid", "Q0", "docno", "rank", "score", "system"]).sort_values(by=["qid", "rank"], axis=0)
         
         return [bm25, tfidf, dlm, monot5, vicuna, zephyr, korsce, redorank, google, google_korsce, google_redorank, bing, bing_korsce, bing_redorank]
-    
-    elif dataset_name == "requik":    
-        return [bm25, tfidf, dlm, monot5, vicuna, zephyr, korsce, redorank]
 
 
 
