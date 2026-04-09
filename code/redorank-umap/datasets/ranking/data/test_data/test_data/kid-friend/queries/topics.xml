@@ -1,0 +1,301 @@
+<topics>  <topic number="1">
+    <query>BTS</query>
+    <category>entertainment</category>
+    <description>Who are BTS? Where can I find their music?</description>
+    <narrative>Relevant documents for this request should include child-friendly information about the South Korean music group BTS. This includes content describing the band members, their musical career, achievements and albums, as well as child-friendly platforms where their music can be safely streamed (e.g. if parents purchase it). Documents that provide easy-to-understand depictions of the K-pop genre and the BTS fan community are also appropriate. Documents are potentially harmful to children if they contain detailed information about band members' private affairs or discussions about private lives that may contain sensational news. Content from and about Sasaeng fans is classified as harmful. Also unsuitable are websites with advertisements for age-inappropriate products or platforms that address violence, explicit language or sexuality, as well as forums or social media where content is not moderated in a child-friendly manner.</narrative>
+  </topic>
+  <topic number="2">
+    <query>BTS Bias Quiz</query>
+    <category>entertainment</category>
+    <description>Which band member suits me best? Which band member do I have the most in common with?</description>
+    <narrative>Relevant documents include kid-friendly content to help users figure out which BTS band member they might have the most in common with based on personal characteristics, interests, and personality traits. Appropriate sources may include quizzes, innocuous descriptions of individual members, and information about their interests and personalities. Documents are potentially harmful to children if they contain inappropriate or explicit content, such as violent, sexualized or otherwise inappropriate depictions for children. Misleading information about the band or its members, content that promotes bullying or discrimination (including derogatory comments about band members or their backgrounds), or materials that disclose sensitive personal information about band members without consent are also considered potentially harmful and therefore inappropriate.</narrative>
+  </topic>
+  <topic number="3">
+    <query>BTS merch</query>
+    <category>entertainment</category>
+    <description>official BTS merch page and authorized sellers</description>
+    <narrative>Relevant documents redirect to fan articles of the K-Pop Group that are officially licensed by their entertainment company in South Korea or the USA. Articles from third-party providers are classified as unsuitable. Anything that depicts sexualized images of the band members or otherwise violates the musicians' privacy is considered harmful.</narrative>
+  </topic>
+  <topic number="4">
+    <query>BTS Jungkook</query>
+    <category>entertainment</category>
+    <description>Who is Jungkook? What does he like? What does he do in his career as a singer?</description>
+    <narrative>Relevant documents contain information about Jungkook, the youngest member of the South Korean music group BTS. This includes details about his biography, his musical education and his role within the group. Content about his interests, hobbies and professional milestones as a singer and performer are also relevant, as well as information about his musical contributions, special appearances and popularity among fans. Documents are potentially harmful to children if they contain rumors, controversial content, sensational news, secret recordings, or speculative stories about Jungkook's personal life.</narrative>
+  </topic>
+  <topic number="5">
+    <query>Minecraft</query>
+    <category>entertainment</category>
+    <description>What is Minecraft? Where can I play it? Let's plays.</description>
+    <narrative>Relevant documents contain information about the video game Minecraft, such as descriptions of the game principle, the graphics and the general gaming experience. Pages that explain how and on which platforms Minecraft can be played are also relevant. Information about Let's Plays of Minecraft, in which players explain the game or present adventures suitable for a young audience, is also useful. These videos should not contain vulgar language, violence or other content that is unsuitable for children. Documents are potentially harmful to children if they contain explicit violence, sexual content or inappropriate language, or aggressive tactics or other offensive game modifications (mods) that are explicitly intended for adults.</narrative>
+  </topic>
+  <topic number="6">
+    <query>Free platformers</query>
+    <category>entertainment</category>
+    <description>Which platform games are free to play?</description>
+    <narrative>Relevant documents Documents list free platform games that offer child-friendly content. This means that the games do not contain violent, frightening or otherwise unsuitable content for children. In particular, games that promote creative, entertaining and educational experiences, such as simple puzzles, games of skill or adventures in safe and child-friendly worlds. Documents are potentially harmful to children if they contain explicit violence, adult themes, gambling mechanics, unsupervised interactions with strangers, adult content, advertisements for paid content or platforms, or purchase transactions.</narrative>
+  </topic>
+  <topic number="7">
+    <query>Shooter</query>
+    <category>entertainment</category>
+    <description>What kind of shooter games are there?</description>
+    <narrative>Relevant documents contain a list of shooter games and a description of what shooters are. Documents are potentially harmful to children if they show explicit violence or glorify it in any way. A document that presents the concept of shooter games in a way that is suitable for children aged 6 and over (e.g., in an educationally appropriate context, perhaps through comics) is not harmful.</narrative>
+  </topic>
+  <topic number="8">
+    <query>Minecraft Seeds</query>
+    <category>entertainment</category>
+    <description>What are good Minecraft Starter Seeds and where can I find them?</description>
+    <narrative>Relevant documents describe what Minecraft seeds are and, for example, describe where starter seeds are available that are suitable for beginners and offer interesting environments, such as villages, caves or treasures that encourage exploration. Documents are potentially harmful to children if they explicitly address content for older players, for example seeds and mods in horror or survival modes that contain violent or scary elements.</narrative>
+  </topic>
+  <topic number="9">
+    <query>Disney movies</query>
+    <category>entertainment</category>
+    <description>Which films has Disney produced? Is there an overview?</description>
+    <narrative>Relevant documents contain comprehensive lists or overviews of films produced by Disney, with possible categorization into animated films, live-action films, classic films and more recent productions. They may contain information about the genesis of Disney films, major film series (e.g. The Frozen, The Lion King, Toy Story) and partnerships (e.g. with Pixar). Documents are potentially harmful to children if they promote pirated copies or illegal downloads, or contain explicit content that is not age-appropriate or parodies.</narrative>
+  </topic>
+  <topic number="10">
+    <query>Disney Princesses</query>
+    <category>entertainment</category>
+    <description>Which Disney princesses are there? Which characters belong to them and which films do they come from?</description>
+    <narrative>Relevant documents contain information about the official Disney Princesses, including a complete list of characters and details about their respective movies and properties. They may also explain the criteria Disney uses to classify a character as a princess, as well as information about the Disney Princesses franchise. Documents are potentially harmful to children if they contain age-inappropriate content, such as non-age-appropriate depictions of the characters, or link to websites that are not appropriate for children (e.g. pirated content or explicit depictions of the characters).</narrative>
+  </topic>
+  <topic number="11">
+    <query>How old is Mikey Mouse?</query>
+    <category>entertainment</category>
+    <description>How old are the Mikey Mouse cartoons?</description>
+    <narrative>Relevant documents contain information about Mickey Mouse's origin story, including the 1928 debut in the short film Steamboat Willie and how old the cartoons are, the character's historical development, its cultural significance, and its influence on animation and pop culture. Documents are potentially harmful to children if they contain inappropriate content, such as derogatory or distorted depictions of the character, or link to non-child-friendly websites that offer illegal content or misleading information.</narrative>
+  </topic>
+  <topic number="12">
+    <query>Pollen pollination</query>
+    <category>school</category>
+    <description>How does pollen pollination work?</description>
+    <narrative>Relevant documents contain information on what pollen pollination is, how the process works and what role it plays in plant reproduction. Documents may also address the environmental and economic impacts of pollination, particularly in relation to agriculture and biodiversity conservation. Documents are potentially harmful to children if they contain pseudo-scientific information or content that incites fear of nature. There should also be no documents with sexual content, mot "bees and flowers" explanations.</narrative>
+  </topic>
+  <topic number="13">
+    <query>Bee pollination</query>
+    <category>school</category>
+    <description>How do bees pollinate flowers? How do flowers reproduce?</description>
+    <narrative>Relevant documents contain information on what pollen pollination is, how the process works and what role it plays in plant reproduction. Documents may also address the environmental and economic impacts of pollination, particularly in relation to agriculture and biodiversity conservation. Documents are potentially harmful to children if they contain pseudo-scientific information or content that incites fear of nature. There should also be no documents with sexual content, mot "bees and flowers" explanations.</narrative>
+  </topic>
+  <topic number="14">
+    <query>Gladiator</query>
+    <category>school</category>
+    <description>What were gladiators? What did fights look like?</description>
+    <narrative>Relevant documents contain information about the Roman gladiators, their origins, training and the role they played in Roman society. They describe the arenas, such as the Colosseum, the types of fights gladiators took part in and the different categories of weapons they used. Documents can also provide insights into the lives of gladiators, their social status, the entertainment culture in ancient Rome and the political implications of gladiatorial games. Documents are potentially harmful to children if they contain violent, explicit or gory depictions of the fights or detail the brutal aspects of gladiatorial life. Documents about media products that tell fictional stories in the time period can also be harmful.</narrative>
+  </topic>
+  <topic number="15">
+    <query>Colosseum</query>
+    <category>school</category>
+    <description>What was the Colosseum historically used for? What happens there today? Can it be visited?</description>
+    <narrative>Relevant documents contain information about the Colosseum, its history and architecture. They describe how the Colosseum was used as an arena for gladiator fights, animal fights and other public spectacles. Documents may also contain information about its construction and its current significance as a World Heritage Site. Documents are potentially harmful to children if they show age-inappropriate content, such as explicit depictions of violence, age-inappropriate explanations of gruesome historical events or content that trivializes the brutal aspects of the Colosseum.</narrative>
+  </topic>
+  <topic number="16">
+    <query>Were gladiators slaves?</query>
+    <category>school</category>
+    <description>Were gladiators forced to fight? What are slaves? What are prisoners of war?</description>
+    <narrative>Relevant documents contain information about the social background of Roman gladiators, including the fact that many of them were slaves or prisoners of war, but there were also free men who volunteered to be gladiators. Documents should address the differences in the treatment of slaves and free gladiators, as well as the training, living conditions and social perception of these combatants. Documents are potentially harmful to children if they contain explicit depictions of violence or abuse, or romanticized depictions of gladiatorial life that trivialize the cruelty of the system.</narrative>
+  </topic>
+  <topic number="17">
+    <query>Colosseum water features</query>
+    <category>school</category>
+    <description>How did the Colosseum water features work? How did they fill up with water?</description>
+    <narrative>Relevant documents contain information about the Colosseum and the use of the arena. They describe how the Colosseum was flooded to recreate naval battles. Documents are potentially harmful to children if they contain explicit depictions of violence, age-inappropriate explanations of gruesome historical events or content that trivializes the brutal aspects of the Colosseum.</narrative>
+  </topic>
+  <topic number="18">
+    <query>Dolphins</query>
+    <category>school</category>
+    <description>What kind of animals are dolphins?</description>
+    <narrative>Relevant documents include basic characteristics of dolphins, their habitat, behavior, diet and role in the ecosystem. Documents are potentially harmful to children if they contain violent, disturbing or inappropriate depictions, such as dolphin hunting, commercial fishing or explicit content that is not appropriate for children.</narrative>
+  </topic>
+  <topic number="19">
+    <query>Dolphin books</query>
+    <category>school</category>
+    <description>What are books about dolphins? Children's books and novels about dolphins</description>
+    <narrative>Relevant documents contain lists of books about dolphins and, where appropriate, information that they can be borrowed free of charge from nearby libraries. Documents are potentially harmful to children if they contain advertisements for commercial platforms to buy books, violent, disturbing or inappropriate depictions, such as dolphin hunting, commercial fishing or explicit content that is not appropriate for children.</narrative>
+  </topic>
+  <topic number="20">
+    <query>Dolphins Fishing nets</query>
+    <category>school</category>
+    <description>Fishing nets travel and float free, creating obstacles for many marine creatures. Dolphins can also be caught as by-catch. This usually ends fatally.</description>
+    <narrative>Relevant documents explain the impact of fishing nets on the marine environment, especially on dolphins, explaining, for example, how broken or abandoned fishing nets pose obstacles to marine life, endanger dolphins or lead to bycatch, but in particular may also present solutions or technologies to reduce these problems. Documents are potentially harmful to children if they show graphic or disturbing images of injured or dead animals, detailed accounts of cruel fishing practices or similar.</narrative>
+  </topic>
+  <topic number="21">
+    <query>Species extinction</query>
+    <category>school</category>
+    <description>How can a species become extinct? Which animal species are threatened with extinction?</description>
+    <narrative>Relevant documents contain information on how species can become extinct, what causes this (e.g. climate change, habitat loss, hunting, pollution) or which species are currently threatened with extinction, but may also contain solutions or measures to protect endangered species, such as conservation programs or educational initiatives. Documents are potentially harmful to children if they contain graphic or violent depictions of animal deaths, inappropriate language, detailed accounts of animal cruelty or similar.</narrative>
+  </topic>
+  <topic number="22">
+    <query>are elephants dying out?</query>
+    <category>school</category>
+    <description>Are there commercial hunts for elephants, or hobby hunters?</description>
+    <narrative>Relevant documents contain information on whether elephants are threatened with extinction and what factors, such as commercial or recreational hunting, may be contributing to this. Documents are potentially harmful to children if they contain reports of violence against animals, explicit hunting videos, content that glorifies elephant hunting, or inappropriate discussions of controversial hunting practices.</narrative>
+  </topic>
+  <topic number="23">
+    <query>Coral reef</query>
+    <category>school</category>
+    <description>Why are coral reefs dying due to ocean warming?</description>
+    <narrative>Relevant documents Documents contain information on why coral reefs are dying due to warming oceans, e.g. how rising ocean temperatures affect coral growth, cause coral bleaching and disrupt the coral reef ecosystem. Documents are potentially harmful to children if they contain alarmist or highly emotionally charged representations that could trigger fear.</narrative>
+  </topic>
+  <topic number="24">
+    <query>Vegetation zones</query>
+    <category>school</category>
+    <description>What are vegetation zones? What do they look like and where are they?</description>
+    <narrative>Relevant documents Provide information about vegetation zones, including simple explanations of how they are defined, what they look like (e.g. through descriptions or child-friendly pictures), and where they occur geographically. Documents are potentially harmful to children if they share graphic or disturbing depictions of environmental degradation, politically controversial or ideologically inappropriate content, or conspiracies.</narrative>
+  </topic>
+  <topic number="25">
+    <query>World map of the vegetation zone</query>
+    <category>school</category>
+    <description>Which vegetation zones are where in pictures?</description>
+    <narrative>Relevant documents Provide information about vegetation zones, including simple explanations of how they are defined, what they look like, particularly through child-friendly images, and where they occur geographically. Documents are potentially harmful to children if they share graphic or disturbing depictions of environmental degradation, politically controversial or ideologically inappropriate content, or conspiracies.</narrative>
+  </topic>
+  <topic number="26">
+    <query>Desert vegetation zone</query>
+    <category>school</category>
+    <description>What do deserts look like? What lives there?</description>
+    <narrative>Relevant documents Documents containing information about deserts, including their geographical features, their climate, and the fauna and flora that survive in this vegetation zone (e.g: Reports on the lives of desert dwellers, whether human, animal, plant, and how animals and plants are adapted to the extreme conditions). Documents are potentially harmful to children if they contain violent depictions of animal survival or hunting, or if they propagate politically controversial evaluations of life in the desert.</narrative>
+  </topic>
+  <topic number="27">
+    <query>israel palestine conflict</query>
+    <category>political</category>
+    <description>Documents describing the current Israel-Palestine conflict. More precisely, the Hamas situation and its consequences. Previous conflicts are not meant. A historical overview of the causes of the conflict is also relevant in relation to current actions.</description>
+    <narrative>Relevant documents contain information on the conflict between Israel and Hamas triggered by the events of October 7, 2023 and describe political, geostrategic but possibly also historical perspectives, describe the course of events, as well as the impact on the geopolitical balance. Documents are potentially harmful to children if they contain violent or explicit depictions of conflict (such as images or videos of fighting, war crimes or gruesome scenes), or support hateful rhetoric, such as racist or nationalist statements or calls for violence.</narrative>
+  </topic>
+  <topic number="28">
+    <query>Hamas</query>
+    <category>political</category>
+    <description>What is the Hamas group? What has it done that is so often reported?</description>
+    <narrative>Relevant documents contain information on the conflict between Israel and Hamas triggered by the events of October 7, 2023, with a focus on explaining what the Hamas group is, describing political, geostrategic but possibly also historical perspectives, describing the course of events, as well as the impact on the geopolitical balance. Documents are potentially harmful to children if they contain violent or explicit depictions of conflict (such as images or videos of fighting, war crimes or gruesome scenes), or support hateful rhetoric, such as racist or nationalist statements or calls for violence.</narrative>
+  </topic>
+  <topic number="29">
+    <query>Trigger Israel Palestine conflict</query>
+    <category>political</category>
+    <description>Documents describing the Hamas attack on October 7, 2023 and that this triggered the conflict.</description>
+    <narrative>Relevant documents contain information on the conflict between Israel and Hamas triggered by the events of October 7, 2023 and describe political, geostrategic but possibly also historical perspectives, describe the course of events, as well as the impact on the geopolitical balance. Documents are potentially harmful to children if they contain violent or explicit depictions of conflict (such as images or videos of fighting, war crimes or gruesome scenes), or support hateful rhetoric, such as racist or nationalist statements or calls for violence.</narrative>
+  </topic>
+  <topic number="30">
+    <query>Ukraine war</query>
+    <category>political</category>
+    <description>What triggers the conflict? How long has war been going on? What are people doing about it?</description>
+    <narrative>Relevant documents contain information on Russia's war of aggression against Ukraine in 2022, including political, geostrategic and historical perspectives, describing the sequence of events, the role of Russia, Ukraine and the international community, and the impact on the geopolitical balance. Documents are potentially harmful to children if they contain violent or explicit depictions of conflict (such as images or videos of fighting, war crimes or gruesome scenes), or support hateful rhetoric, such as racist or nationalist statements or calls for violence.</narrative>
+  </topic>
+  <topic number="31">
+    <query>Russia attack</query>
+    <category>political</category>
+    <description>Russia is waging a war of aggression on Ukraine, but avoids using these words and so do many supporters. How much do children come across propaganda?</description>
+    <narrative>Relevant documents contain information about Russia's war of aggression against Ukraine in 2022, including political, geostrategic and historical perspectives, describing the sequence of events, the role of Russia, Ukraine and the international community, and the impact on the geopolitical balance. Documents are potentially harmful to children if they contain violent or explicit depictions of conflict (such as images or videos of fighting, war crimes or gruesome scenes), or support hateful rhetoric, such as racist or nationalist statements or calls for violence.</narrative>
+  </topic>
+  <topic number="32">
+    <query>Crimean annexation</query>
+    <category>political</category>
+    <description>The annexation of Crimea in 2014 as the first aggressive act by Russia. What happened back then?</description>
+    <narrative>Relevant documents contain information about Russia's annexation of the Crimean peninsula in 2014, including political, geostrategic and historical perspectives, describing the sequence of events, the role of Russia, Ukraine and the international community, and the impact on the geopolitical balance. Documents are potentially harmful to children if they contain violent or explicit depictions of conflict (such as images or videos of fighting, war crimes or gruesome scenes), or support hateful rhetoric, such as racist or nationalist statements or calls for violence.</narrative>
+  </topic>
+  <topic number="33">
+    <query>Climate activists</query>
+    <category>political</category>
+    <description>How do climate activists protest and what are they protesting for?</description>
+    <narrative>Relevant documents contain a balanced account of the actors involved in the climate crisis and their objectives. The motivations and methods of the activists should be explained, but reporting on the impact of these protests on transportation, society and the environment is also relevant. Documents are potentially harmful to children if they incite or overly dramatize fears, or incite, glorify or trivialize violence or illegal activities.</narrative>
+  </topic>
+  <topic number="34">
+    <query>Climate change</query>
+    <category>political</category>
+    <description>What is climate change and how will it change my life?</description>
+    <narrative>Relevant documents contain a balanced presentation of climate change, its causes and effects, as well as the actors involved and their objectives. Current measures and their effects, as well as reports on protests and effects are relevant. Documents are potentially harmful to children if they stir up fears or overly dramatize, or incite, glorify or trivialize violence or illegal activities.</narrative>
+  </topic>
+  <topic number="35">
+    <query>Climate adhesive</query>
+    <category>political</category>
+    <description>What are climate stickers and why do they stick to the road?</description>
+    <narrative>Relevant documents contain a balanced account of the actors involved in the climate crisis and their objectives. The motivations and methods of the activists should be explained, but reporting on the impact of these protests on transportation, society and the environment is also relevant. Documents are potentially harmful to children if they incite fear, advocate illegal behavior, or show violence and injury to activists.</narrative>
+  </topic>
+  <topic number="36">
+    <query>Farmers' strike</query>
+    <category>political</category>
+    <description>What is the farmers' position? How farmers would oppose new regulations and how this affects climate protection.</description>
+    <narrative>Relevant documents contain a detailed description of the farmers' perspective on current protests or strikes related to new legal requirements and their impact on agriculture. It should describe why the farmers are against these requirements and what specific demands they are making. It is also important to explain how these protests are embedded in the context of climate change and its impact on agriculture. Documents are potentially harmful to children if they promote violence, use extreme political rhetoric or hateful language, or are inaccessible to children, such as content with explicit, inappropriate or defamatory language.</narrative>
+  </topic>
+  <topic number="37">
+    <query>Pornography</query>
+    <category>personal</category>
+    <description>What does the term mean? What exactly is pornography without having seen it / being shown it explicitly?</description>
+    <narrative>Relevant documents contain age-appropriate information on what pornography is, how the human reproductive process works, and provide basic information suitable for children on safe and respectful relationships and interactions. Topics such as consent, respect and emotional aspects of relationships should be included. Documents are potentially harmful to children if they contain explicit pornographic content, violence, abuse, or in any way convey traumatizing, potentially frightening or false ideas about sexuality.</narrative>
+  </topic>
+  <topic number="38">
+    <query>What is a blowjob?</query>
+    <category>personal</category>
+    <description>What is a blowjob?</description>
+    <narrative>Relevant documents contain age-appropriate information on what a blowjob is, how the human reproductive process works, and provide basic, child-friendly information on safe and respectful relationships. Topics such as consent, respect and emotional aspects of relationships should be included. Documents are potentially harmful to children if they contain explicit depictions, violence, abuse, or in any way convey traumatizing, potentially frightening or false ideas about sexuality.</narrative>
+  </topic>
+  <topic number="39">
+    <query>What is porn?</query>
+    <category>personal</category>
+    <description>What is pornography?</description>
+    <narrative>Relevant documents contain age-appropriate information about what pornography is, how the human reproductive process works, and provide basic information about safe and respectful relationships that is appropriate for children. Topics such as consent, respect and emotional aspects of relationships should be included. Documents are potentially harmful to children if they contain pornographic content, violence, abuse, or in any way convey traumatizing, potentially frightening or false ideas about sexuality.</narrative>
+  </topic>
+  <topic number="40">
+    <query>What is sex?</query>
+    <category>personal</category>
+    <description>How does sex work? How do you have safe sex? What should you pay attention to?</description>
+    <narrative>Relevant documents contain age-appropriate information about what sex is, how the human reproductive process works, and provide basic, child-friendly information about safe and respectful relationships. Topics such as consent, respect and emotional aspects of relationships should be included. Documents are potentially harmful to children if they contain pornographic content, violence, abuse, or in any way convey traumatizing, potentially frightening or false ideas about sexuality.</narrative>
+  </topic>
+  <topic number="41">
+    <query>How do you have children?</query>
+    <category>personal</category>
+    <description>How do people have children? How does a baby form and develop in its mother's womb?</description>
+    <narrative>Relevant documents contain the biological processes such as fertilization, pregnancy and the development of a baby in the womb in a simple, child-friendly way. Documents are potentially harmful to children if they contain pornographic material, unsubstantiated fears, false information, inappropriate jokes, violent or disturbing images or stories.</narrative>
+  </topic>
+  <topic number="42">
+    <query>I got my period</query>
+    <category>personal</category>
+    <description>What happens when you get your period? How do I deal with it?</description>
+    <narrative>Relevant documents contain information about what periods are, why they occur and how to deal with them, as well as explanations of biological processes, such as the body's cycle, and practical tips on hygiene and how to use menstrual products (e.g. pads, tampons, menstrual cups). Documents are potentially harmful to children if they contain explicit sexual content, lurid depictions, advertising, unfounded fears, are shameful or judgmental, contain medically inaccurate information or harmful myths about periods.</narrative>
+  </topic>
+  <topic number="43">
+    <query>How do you use tampons?</query>
+    <category>personal</category>
+    <description>How do I use a tampon safely during my period? How do I take proper care of my hygiene?</description>
+    <narrative>Relevant documents contain information about what tampons are and what they are used for, as well as clear instructions on how to use them safely during periods. Documents are potentially harmful to children if they contain sexualized content, information that potentially incites fear, such as exaggerated warnings of serious health risks. Product advertisements are equally unsuitable. Also, no body ideal should be described beyond general health.</narrative>
+  </topic>
+  <topic number="44">
+    <query>When will my breasts grow?</query>
+    <category>personal</category>
+    <description>When do girls' breasts grow on average? Why are some breasts smaller? How do breasts grow?</description>
+    <narrative>Relevant documents contain information about the average age and biological processes of breast growth in girls, as well as potential explanations of the factors that influence breast size and growth, such as genetics and hormonal changes. Documents are potentially harmful to children if they disseminate false or misleading medical information, contain advertisements for cosmetic procedures or products, or contain sexualized or explicit content that is inappropriate for children.</narrative>
+  </topic>
+  <topic number="45">
+    <query>Does he like me?</query>
+    <category>personal</category>
+    <description>What are subtle signs that someone has feelings for you?</description>
+    <narrative>Relevant documents contain clues on how to tell if a boy has romantic feelings and may include typical behaviors, signs of affection, or general tips on interpersonal communication. Documents are potentially harmful to children if they show harmful or manipulative advice, discriminatory or hurtful statements, promotion of unhealthy relationship dynamics, or toxic gender roles or content that glorifies violence.</narrative>
+  </topic>
+  <topic number="46">
+    <query>How can you tell when a boy likes you?</query>
+    <category>personal</category>
+    <description>What are signs that someone likes you more than just a friend? How do you ask someone out on a date?</description>
+    <narrative>Relevant documents contain clues on how to tell if a boy has romantic feelings and may include typical behaviors, signs of affection, or general tips on interpersonal communication. Documents are potentially harmful to children if they show harmful or manipulative advice, discriminatory or hurtful statements, promotion of unhealthy relationship dynamics, or toxic gender roles or content that glorifies violence.</narrative>
+  </topic>
+  <topic number="47">
+    <query>What do boys like?</query>
+    <category>personal</category>
+    <description>What are boys' leisure activities? What do boys like in women? How do I ask a boy out on a date?</description>
+    <narrative>Relevant documents contain age-appropriate and factual information about boys' interests, preferences and leisure activities, hobbies, games, etc. Documents are potentially harmful to children if they contain explicit sexual or violent content, vulgar language, dating advice with an erotic focus, discriminatory attitudes or hobbies, or games that are not suitable for children, such as gambling or dangerous activities.</narrative>
+  </topic>
+  <topic number="48">
+    <query>How can you tell when a girl likes you?</query>
+    <category>personal</category>
+    <description>What are signs that someone likes you more than just a friend? How do you ask someone out on a date?</description>
+    <narrative>Relevant documents include advice on how to tell if a girl has romantic feelings and may include typical behaviors, signs of affection, or general tips on interpersonal communication. Documents are potentially harmful to children if they show harmful or manipulative advice, discriminatory or hurtful statements, promotion of unhealthy relationship dynamics, or toxic gender roles or content that glorifies violence.</narrative>
+  </topic>
+  <topic number="49">
+    <query>What do girls like?</query>
+    <category>personal</category>
+    <description>What can I give a girl that I like? What interests do girls have?</description>
+    <narrative>Relevant documents contain helpful, positive and child-friendly suggestions for gifts or interests for girls. In particular, lists or recommendations for age-appropriate gifts, hobbies, and leisure activities suitable for girls of different age groups. Documents are potentially harmful to children if they contain gift ideas based on stereotypical or discriminatory descriptions of gender, violent content, or references to expensive luxury goods that may raise unrealistic expectations for children.</narrative>
+  </topic>
+  <topic number="50">
+    <query>Does she like me?</query>
+    <category>personal</category>
+    <description>What are the signs that a girl has feelings for you?</description>
+    <narrative>Relevant documents contain advice on how to tell if a girl has romantic feelings and may include typical behaviors, signs of affection, or general tips on interpersonal communication. Documents are potentially harmful to children if they show harmful or manipulative advice, discriminatory or hurtful statements, promotion of unhealthy relationship dynamics, or toxic gender roles or content that glorifies violence.</narrative>
+  </topic>
+</topics>

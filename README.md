@@ -12,5 +12,9 @@ The traditional Information Retrieval (IR) evaluation framework---anchored in to
 Run the following python notebooks in order:
 1. ``kid_friend_preprocessing.ipynb`` to convert the data files into suitable format and compute judgment labels for readability, objectivity, and educational value.
 2. ``indexing_retrieval.ipynb`` to index the kid-friend corpus and implement the rankers considered in the study.
-3. ``evaluation.ipynb`` to benchmark ranker performance using the $Traditional$, $Multiview$, and $Composite$ frameworks.
+3. To implement the REdORank, run the following commands on a terminal opened from within the ``code`` directory:  
+``python redorank-umap/src/experiment.py --model kid-friend_bm25 -l --store_predictions`` to re-rank resources retrieved by BM25  
+``python redorank-umap/src/experiment.py --model kid-friend_google -l --store_predictions`` to re-rank Google results  
+``python redorank-umap/src/experiment.py --model kid-friend_bing -l --store_predictions`` to re-rank Bing results
+4. ``evaluation.ipynb`` to benchmark ranker performance using the $Traditional$, $Multiview$, and $Composite$ frameworks.
 
